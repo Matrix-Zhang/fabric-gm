@@ -7,7 +7,6 @@ SPDX-License-Identifier: Apache-2.0
 package kafka
 
 import (
-	"github.com/zcqzcg/sarama"
 	"github.com/hyperledger/fabric-lib-go/healthz"
 	"github.com/hyperledger/fabric/common/metrics"
 	"github.com/hyperledger/fabric/orderer/common/localconfig"
@@ -16,6 +15,7 @@ import (
 	cb "github.com/hyperledger/fabric/protos/common"
 	"github.com/op/go-logging"
 	"github.com/pkg/errors"
+	"github.com/zcqzcg/sarama"
 )
 
 //go:generate counterfeiter -o mock/health_checker.go -fake-name HealthChecker . healthChecker

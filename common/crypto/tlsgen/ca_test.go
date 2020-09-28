@@ -14,13 +14,15 @@ import (
 
 	"encoding/base64"
 	"fmt"
+
 	x509 "github.com/zcqzcg/gmsm/sm2"
 	//"crypto/x509"
-	tls "github.com/zcqzcg/gmtls"
 	"math/rand"
 	"net"
 	"testing"
 	"time"
+
+	tls "github.com/zcqzcg/gmtls"
 
 	"github.com/stretchr/testify/assert"
 	credentials "github.com/zcqzcg/gmtls/gmcredentials"

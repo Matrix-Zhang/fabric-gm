@@ -10,10 +10,10 @@ import (
 	"crypto/tls"
 	"testing"
 
-	"github.com/zcqzcg/sarama"
 	localconfig "github.com/hyperledger/fabric/orderer/common/localconfig"
 	"github.com/hyperledger/fabric/orderer/mocks/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/zcqzcg/sarama"
 )
 
 func TestBrokerConfig(t *testing.T) {

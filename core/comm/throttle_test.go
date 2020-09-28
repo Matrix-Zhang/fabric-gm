@@ -24,7 +24,9 @@ import (
 //go:generate counterfeiter -o mock/stream_handler.go -fake-name StreamHandler . streamHandler
 //go:generate counterfeiter -o mock/unary_handler.go -fake-name UnaryHandler . unaryHandler
 
-type serverStream interface{ grpc.ServerStream }
+type serverStream interface {
+	grpc.ServerStream
+}
 type streamHandler grpc.StreamHandler
 type unaryHandler grpc.UnaryHandler
 

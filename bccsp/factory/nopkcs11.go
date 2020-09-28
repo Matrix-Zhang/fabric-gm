@@ -64,7 +64,7 @@ func initFactories(config *FactoryOpts) error {
 		err := initBCCSP(f, config)
 		if err != nil {
 			factoriesInitError = errors.Wrapf(err, "Failed initializing BCCSP.")
-	}
+		}
 	}
 
 	// BCCSP Plugin

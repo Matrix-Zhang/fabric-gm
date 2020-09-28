@@ -137,7 +137,7 @@ func Start(cmd string, conf *localconfig.TopLevel) {
 	if clusterType {
 		logger.Infof("Setting up cluster for orderer type %s", typ)
 
-		clusterClientConfig = initializeClusterClientConfig(conf,clusterType, bootstrapBlock)
+		clusterClientConfig = initializeClusterClientConfig(conf, clusterType, bootstrapBlock)
 		clusterDialer = &cluster.PredicateDialer{
 			ClientConfig: clusterClientConfig,
 		}

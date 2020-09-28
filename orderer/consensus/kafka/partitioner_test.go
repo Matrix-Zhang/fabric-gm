@@ -9,8 +9,8 @@ package kafka
 import (
 	"testing"
 
-	"github.com/zcqzcg/sarama"
 	"github.com/stretchr/testify/assert"
+	"github.com/zcqzcg/sarama"
 )
 
 func TestStaticPartitioner(t *testing.T) {

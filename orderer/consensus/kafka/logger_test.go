@@ -12,10 +12,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/zcqzcg/sarama"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/onsi/gomega/gbytes"
 	"github.com/stretchr/testify/assert"
+	"github.com/zcqzcg/sarama"
 )
 
 func TestLoggerInit(t *testing.T) {

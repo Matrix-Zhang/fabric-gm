@@ -9,11 +9,12 @@ package crypto_test
 import (
 	"encoding/pem"
 	"fmt"
-	x509 "github.com/zcqzcg/gmsm/sm2"
 	"io/ioutil"
 	"path/filepath"
 	"testing"
 	"time"
+
+	x509 "github.com/zcqzcg/gmsm/sm2"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/crypto"

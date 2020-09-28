@@ -16,15 +16,15 @@ limitations under the License.
 package gm
 
 import (
+	"crypto/ecdsa"
 	"crypto/rand"
 	"crypto/x509"
-	"crypto/ecdsa"
 	"io"
 	"math/big"
 
 	"github.com/hyperledger/fabric/bccsp"
-	"github.com/zcqzcg/gmsm/sm2"
 	"github.com/pkg/errors"
+	"github.com/zcqzcg/gmsm/sm2"
 )
 
 // //调用SM2接口生成SM2证书
@@ -59,9 +59,9 @@ import (
 
 //调用SM2接口生成SM2证书
 func CreateCertificateToMem(template, parent *sm2.Certificate, key bccsp.Key) (cert []byte, err error) {
-	sm2pk,ok := key.(*gmsm2PrivateKey)
-	if !ok{
-		return nil,errors.Wrap(err,"CreateCertificateToMem interface wrong: it's not gmsm2PrivateKey.")
+	sm2pk, ok := key.(*gmsm2PrivateKey)
+	if !ok {
+		return nil, errors.Wrap(err, "CreateCertificateToMem interface wrong: it's not gmsm2PrivateKey.")
 	}
 	pk := sm2pk.privKey
 
@@ -97,7 +97,7 @@ func CreateSm2CertificateRequestToMem(certificateRequest *sm2.CertificateRequest
 // X509 证书请求转换 SM2证书请求
 func ParseX509CertificateRequest2Sm2(x509req *x509.CertificateRequest) *sm2.CertificateRequest {
 	sm2req := &sm2.CertificateRequest{
-		Raw: x509req.Raw, // Complete ASN.1 DER content (CSR, signature algorithm and signature).
+		Raw:                      x509req.Raw,                      // Complete ASN.1 DER content (CSR, signature algorithm and signature).
 		RawTBSCertificateRequest: x509req.RawTBSCertificateRequest, // Certificate request info part of raw ASN.1 DER content.
 		RawSubjectPublicKeyInfo:  x509req.RawSubjectPublicKeyInfo,  // DER encoded SubjectPublicKeyInfo.
 		RawSubject:               x509req.RawSubject,               // DER encoded Subject.
@@ -169,8 +169,8 @@ func ParseX509Certificate2Sm2(x509Cert *x509.Certificate) *sm2.Certificate {
 		UnknownExtKeyUsage: x509Cert.UnknownExtKeyUsage,
 
 		BasicConstraintsValid: x509Cert.BasicConstraintsValid,
-		IsCA:       x509Cert.IsCA,
-		MaxPathLen: x509Cert.MaxPathLen,
+		IsCA:                  x509Cert.IsCA,
+		MaxPathLen:            x509Cert.MaxPathLen,
 		// MaxPathLenZero indicates that BasicConstraintsValid==true and
 		// MaxPathLen==0 should be interpreted as an actual maximum path length
 		// of zero. Otherwise, that combination is interpreted as MaxPathLen
@@ -241,8 +241,8 @@ func ParseSm2Certificate2X509(sm2Cert *sm2.Certificate) *x509.Certificate {
 		UnknownExtKeyUsage: sm2Cert.UnknownExtKeyUsage,
 
 		BasicConstraintsValid: sm2Cert.BasicConstraintsValid,
-		IsCA:       sm2Cert.IsCA,
-		MaxPathLen: sm2Cert.MaxPathLen,
+		IsCA:                  sm2Cert.IsCA,
+		MaxPathLen:            sm2Cert.MaxPathLen,
 		// MaxPathLenZero indicates that BasicConstraintsValid==true and
 		// MaxPathLen==0 should be interpreted as an actual maximum path length
 		// of zero. Otherwise, that combination is interpreted as MaxPathLen

@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package kafka
 
 import (
-	"github.com/zcqzcg/sarama"
 	localconfig "github.com/hyperledger/fabric/orderer/common/localconfig"
 	"github.com/zcqzcg/gmsm/sm2"
 	tls "github.com/zcqzcg/gmtls"
+	"github.com/zcqzcg/sarama"
 )
 
 func newBrokerConfig(

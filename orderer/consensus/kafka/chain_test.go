@@ -13,7 +13,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/zcqzcg/sarama"
 	"github.com/Shopify/sarama/mocks"
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/channelconfig"
@@ -31,6 +30,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/zcqzcg/sarama"
 )
 
 var (

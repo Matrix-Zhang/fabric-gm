@@ -23,11 +23,12 @@ import (
 	"crypto/x509/pkix"
 	"encoding/asn1"
 	//"crypto/x509"
-	x509 "github.com/zcqzcg/gmsm/sm2"
 	"math/big"
 	"net"
 	"testing"
 	"time"
+
+	x509 "github.com/zcqzcg/gmsm/sm2"
 
 	"github.com/hyperledger/fabric/bccsp/utils"
 	"github.com/stretchr/testify/assert"

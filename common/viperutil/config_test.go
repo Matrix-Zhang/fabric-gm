@@ -15,9 +15,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/zcqzcg/sarama"
 	"github.com/hyperledger/fabric/orderer/mocks/util"
 	"github.com/spf13/viper"
+	"github.com/zcqzcg/sarama"
 )
 
 const Prefix = "VIPERUTIL"

@@ -8,8 +8,9 @@ package msp
 
 import (
 	//"crypto/x509"
-	x509 "github.com/zcqzcg/gmsm/sm2"
 	"testing"
+
+	x509 "github.com/zcqzcg/gmsm/sm2"
 
 	"github.com/hyperledger/fabric/protos/msp"
 

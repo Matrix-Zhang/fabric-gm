@@ -8,11 +8,13 @@ package tlsgen
 
 import (
 	"encoding/pem"
+
 	x509 "github.com/zcqzcg/gmsm/sm2"
 	//"crypto/tls"
 	//"crypto/x509"
-	tls "github.com/zcqzcg/gmtls"
 	"testing"
+
+	tls "github.com/zcqzcg/gmtls"
 
 	"github.com/stretchr/testify/assert"
 )

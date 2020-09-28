@@ -16,9 +16,9 @@ import (
 	"time"
 
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
-	"google.golang.org/grpc"
 	"github.com/zcqzcg/gmsm/sm2"
 	tls "github.com/zcqzcg/gmtls"
+	"google.golang.org/grpc"
 )
 
 type GRPCServer struct {

@@ -23,9 +23,9 @@ import (
 	ab "github.com/hyperledger/fabric/protos/orderer"
 	"github.com/hyperledger/fabric/protos/utils"
 
-	"github.com/zcqzcg/sarama"
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
+	"github.com/zcqzcg/sarama"
 )
 
 var mockRetryOptions = localconfig.Retry{
