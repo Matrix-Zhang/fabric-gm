@@ -15,7 +15,7 @@ import (
 	"github.com/hyperledger/fabric/bccsp/idemix/handlers"
 	cryptolib "github.com/hyperledger/fabric/idemix"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // SignatureScheme encapsulates the idemix algorithms to sign and verify using an idemix credential.

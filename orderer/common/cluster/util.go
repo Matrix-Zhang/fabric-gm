@@ -9,10 +9,10 @@ package cluster
 import (
 	"bytes"
 
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 
 	//"crypto/tls"
-	tls "github.com/zcqzcg/gmtls"
+	tls "github.com/tjfoc/gmtls"
 	//"crypto/x509"
 	"encoding/hex"
 	"encoding/pem"

@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	x509 "github.com/zcqzcg/gmsm/sm2"
+	x509 "github.com/tjfoc/gmsm/sm2"
 
 	"github.com/hyperledger/fabric/bccsp/utils"
 	"github.com/stretchr/testify/assert"

@@ -18,9 +18,9 @@ import (
 
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/core/config"
-	"github.com/zcqzcg/gmsm/sm2"
-	tls "github.com/zcqzcg/gmtls"
-	"github.com/zcqzcg/gmtls/gmcredentials"
+	"github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
+	"github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

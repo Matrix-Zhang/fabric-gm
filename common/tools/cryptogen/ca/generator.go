@@ -25,7 +25,7 @@ import (
 	"github.com/hyperledger/fabric/bccsp/gm"
 	"github.com/hyperledger/fabric/bccsp/utils"
 	"github.com/hyperledger/fabric/common/tools/cryptogen/csp"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 type CA struct {

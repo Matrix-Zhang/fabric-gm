@@ -15,7 +15,7 @@ import (
 	"github.com/hyperledger/fabric/msp"
 	m "github.com/hyperledger/fabric/protos/msp"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // GenerateIssuerKey invokes Idemix library to generate an issuer (CA) signing key pair.

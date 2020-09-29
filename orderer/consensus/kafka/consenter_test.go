@@ -25,7 +25,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
-	"github.com/zcqzcg/sarama"
+	"github.com/qianyan/sarama"
 )
 
 var mockRetryOptions = localconfig.Retry{

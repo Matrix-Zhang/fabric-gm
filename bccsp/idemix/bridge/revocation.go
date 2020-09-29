@@ -13,7 +13,7 @@ import (
 	"github.com/hyperledger/fabric/bccsp"
 	cryptolib "github.com/hyperledger/fabric/idemix"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // Revocation encapsulates the idemix algorithms for revocation

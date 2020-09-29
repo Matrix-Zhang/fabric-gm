@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 type ECDSASignature struct {

@@ -18,7 +18,7 @@ import (
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/protos/msp"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 	"go.uber.org/zap/zapcore"
 )
 

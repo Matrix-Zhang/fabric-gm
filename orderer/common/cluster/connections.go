@@ -13,7 +13,7 @@ import (
 
 	"github.com/hyperledger/fabric/common/metrics"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 	"google.golang.org/grpc"
 )
 

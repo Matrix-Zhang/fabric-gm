@@ -27,7 +27,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // struct to hold info required for PKCS#8

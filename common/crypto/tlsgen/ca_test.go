@@ -15,17 +15,17 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	x509 "github.com/zcqzcg/gmsm/sm2"
+	x509 "github.com/tjfoc/gmsm/sm2"
 	//"crypto/x509"
 	"math/rand"
 	"net"
 	"testing"
 	"time"
 
-	tls "github.com/zcqzcg/gmtls"
+	tls "github.com/tjfoc/gmtls"
 
 	"github.com/stretchr/testify/assert"
-	credentials "github.com/zcqzcg/gmtls/gmcredentials"
+	credentials "github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc"
 	//"google.golang.org/grpc/credentials"
 )

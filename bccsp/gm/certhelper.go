@@ -24,7 +24,7 @@ import (
 
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // //调用SM2接口生成SM2证书

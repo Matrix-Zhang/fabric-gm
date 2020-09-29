@@ -14,7 +14,7 @@ import (
 	"github.com/hyperledger/fabric-amcl/amcl/FP256BN"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 var idemixLogger = flogging.MustGetLogger("idemix")

@@ -17,7 +17,7 @@ import (
 
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // revocationSecretKey contains the revocation secret key

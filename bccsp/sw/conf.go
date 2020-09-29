@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"hash"
 
-	"github.com/zcqzcg/gmsm/sm3"
+	"github.com/tjfoc/gmsm/sm3"
 	"golang.org/x/crypto/sha3"
 )
 

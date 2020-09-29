@@ -9,7 +9,7 @@ import (
 	//"crypto/ecdsa"
 
 	"github.com/hyperledger/fabric/bccsp"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 // IssuerPublicKey is the issuer public key

@@ -13,9 +13,9 @@ import (
 	"math/big"
 
 	"github.com/hyperledger/fabric/common/util"
-	"github.com/zcqzcg/gmsm/sm2"
-	tls "github.com/zcqzcg/gmtls"
-	credentials "github.com/zcqzcg/gmtls/gmcredentials"
+	"github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
+	credentials "github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc/peer"
 )
 

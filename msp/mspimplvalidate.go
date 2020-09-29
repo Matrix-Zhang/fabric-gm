@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 func (msp *bccspmsp) validateIdentity(id *identity) error {

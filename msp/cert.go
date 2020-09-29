@@ -28,7 +28,7 @@ import (
 
 	"github.com/hyperledger/fabric/bccsp/gm"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 type validity struct {

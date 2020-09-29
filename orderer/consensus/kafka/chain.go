@@ -21,7 +21,7 @@ import (
 	ab "github.com/hyperledger/fabric/protos/orderer"
 	"github.com/hyperledger/fabric/protos/utils"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/sarama"
+	"github.com/qianyan/sarama"
 )
 
 // Used for capturing metrics -- see processMessagesToBlocks

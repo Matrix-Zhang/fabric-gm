@@ -19,7 +19,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 func (p *CertKeyPair) PrivKeyString() string {

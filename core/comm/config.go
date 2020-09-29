@@ -11,8 +11,8 @@ import (
 
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/common/metrics"
-	"github.com/zcqzcg/gmsm/sm2"
-	tls "github.com/zcqzcg/gmtls"
+	"github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/keepalive"
 )

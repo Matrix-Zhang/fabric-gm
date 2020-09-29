@@ -10,11 +10,11 @@ import (
 	"context"
 	"time"
 
-	tls "github.com/zcqzcg/gmtls"
+	tls "github.com/tjfoc/gmtls"
 
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
-	//credentials "github.com/zcqzcg/gmtls/gmcredentials"
+	"github.com/tjfoc/gmsm/sm2"
+	//credentials "github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/keepalive"
 )

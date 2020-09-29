@@ -15,7 +15,7 @@ import (
 	cb "github.com/hyperledger/fabric/protos/common"
 	"github.com/op/go-logging"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/sarama"
+	"github.com/qianyan/sarama"
 )
 
 //go:generate counterfeiter -o mock/health_checker.go -fake-name HealthChecker . healthChecker

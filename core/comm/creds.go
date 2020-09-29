@@ -9,7 +9,7 @@ package comm
 import (
 	"context"
 
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 
 	//"crypto/tls"
 	//"crypto/x509"
@@ -18,9 +18,9 @@ import (
 	"sync"
 
 	"github.com/hyperledger/fabric/common/flogging"
-	tls "github.com/zcqzcg/gmtls"
-	//credentials "github.com/zcqzcg/gmtls/gmcredentials"
-	"github.com/zcqzcg/gmtls/gmcredentials"
+	tls "github.com/tjfoc/gmtls"
+	//credentials "github.com/tjfoc/gmtls/gmcredentials"
+	"github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc/credentials"
 )
 

@@ -17,7 +17,7 @@ package sw
 
 import (
 	"github.com/hyperledger/fabric/bccsp"
-	"github.com/zcqzcg/gmsm/sm4"
+	"github.com/tjfoc/gmsm/sm4"
 )
 
 // GetRandomBytes returns len random looking bytes

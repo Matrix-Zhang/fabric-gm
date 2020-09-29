@@ -16,7 +16,7 @@ limitations under the License.
 
 package utils
 
-import "github.com/zcqzcg/gmsm/sm2"
+import "github.com/tjfoc/gmsm/sm2"
 
 // DERToSM2Certificate converts der to sm2
 func DERToSM2Certificate(asn1Data []byte) (*sm2.Certificate, error) {

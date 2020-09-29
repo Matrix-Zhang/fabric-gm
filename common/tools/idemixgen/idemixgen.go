@@ -24,7 +24,7 @@ import (
 	"github.com/hyperledger/fabric/idemix"
 	"github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )
 

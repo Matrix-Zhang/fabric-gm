@@ -16,8 +16,8 @@ import (
 	"time"
 
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
-	"github.com/zcqzcg/gmsm/sm2"
-	tls "github.com/zcqzcg/gmtls"
+	"github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
 	"google.golang.org/grpc"
 )
 

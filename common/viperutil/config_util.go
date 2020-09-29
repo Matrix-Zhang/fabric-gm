@@ -24,7 +24,7 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
-	"github.com/zcqzcg/sarama"
+	"github.com/qianyan/sarama"
 )
 
 var logger = flogging.MustGetLogger("viperutil")

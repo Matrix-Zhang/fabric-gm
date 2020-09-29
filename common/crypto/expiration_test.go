@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	x509 "github.com/zcqzcg/gmsm/sm2"
+	x509 "github.com/tjfoc/gmsm/sm2"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/crypto"

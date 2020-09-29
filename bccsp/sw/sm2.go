@@ -23,7 +23,7 @@ import (
 	"math/big"
 
 	"github.com/hyperledger/fabric/bccsp"
-	"github.com/zcqzcg/gmsm/sm2"
+	"github.com/tjfoc/gmsm/sm2"
 )
 
 type SM2Signature struct {

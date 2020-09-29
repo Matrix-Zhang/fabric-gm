@@ -13,7 +13,7 @@ import (
 	localconfig "github.com/hyperledger/fabric/orderer/common/localconfig"
 	"github.com/hyperledger/fabric/orderer/mocks/util"
 	"github.com/stretchr/testify/assert"
-	"github.com/zcqzcg/sarama"
+	"github.com/qianyan/sarama"
 )
 
 func TestBrokerConfig(t *testing.T) {
