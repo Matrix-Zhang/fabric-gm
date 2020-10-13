@@ -9,9 +9,9 @@ package comm_test
 import (
 	"bytes"
 	"context"
-	"crypto/tls"
-	"crypto/x509"
 	"fmt"
+	x509 "github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
 	"io/ioutil"
 	"net"
 	"path/filepath"
@@ -29,7 +29,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
+	//"google.golang.org/grpc/credentials"
+	credentials "github.com/tjfoc/gmtls/gmcredentials"
 )
 
 const testTimeout = 1 * time.Second // conservative
@@ -544,15 +545,15 @@ func loadCerts(t *testing.T) testCerts {
 
 	var certs testCerts
 	var err error
-	certs.caPEM, err = ioutil.ReadFile(filepath.Join("testdata", "certs", "Org1-cert.pem"))
+	certs.caPEM, err = ioutil.ReadFile(filepath.Join("testgmdata", "certs", "Org1-cert.pem"))
 	if err != nil {
 		t.Fatalf("unexpected error reading root cert for test: %v", err)
 	}
-	certs.certPEM, err = ioutil.ReadFile(filepath.Join("testdata", "certs", "Org1-client1-cert.pem"))
+	certs.certPEM, err = ioutil.ReadFile(filepath.Join("testgmdata", "certs", "Org1-client1-cert.pem"))
 	if err != nil {
 		t.Fatalf("unexpected error reading cert for test: %v", err)
 	}
-	certs.keyPEM, err = ioutil.ReadFile(filepath.Join("testdata", "certs", "Org1-client1-key.pem"))
+	certs.keyPEM, err = ioutil.ReadFile(filepath.Join("testgmdata", "certs", "Org1-client1-key.pem"))
 	if err != nil {
 		t.Fatalf("unexpected error reading key for test: %v", err)
 	}
@@ -561,8 +562,8 @@ func loadCerts(t *testing.T) testCerts {
 		t.Fatalf("unexpected error loading certificate for test: %v", err)
 	}
 	certs.serverCert, err = tls.LoadX509KeyPair(
-		filepath.Join("testdata", "certs", "Org1-server1-cert.pem"),
-		filepath.Join("testdata", "certs", "Org1-server1-key.pem"),
+		filepath.Join("testgmdata", "certs", "Org1-server1-cert.pem"),
+		filepath.Join("testgmdata", "certs", "Org1-server1-key.pem"),
 	)
 
 	return certs
