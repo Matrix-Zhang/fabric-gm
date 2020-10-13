@@ -43,7 +43,9 @@ pipeline {
             post {
                 failure {
                     echo 'Test fabcar failed'
-                    currentBuild.result = 'UNSTABLE'
+                    scirpt {
+                        currentBuild.result = 'UNSTABLE'
+                    }
                 }
             }
         }
