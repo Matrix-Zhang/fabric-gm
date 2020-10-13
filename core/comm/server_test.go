@@ -9,10 +9,10 @@ package comm_test
 import (
 	"bytes"
 	"context"
-	"crypto/tls"
-	"crypto/x509"
 	"errors"
 	"fmt"
+	x509 "github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
 	"io"
 	"io/ioutil"
 	"log"
@@ -26,9 +26,10 @@ import (
 	"github.com/hyperledger/fabric/core/comm"
 	testpb "github.com/hyperledger/fabric/core/comm/testdata/grpc"
 	"github.com/stretchr/testify/assert"
+	credentials "github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
+
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/status"
 )
@@ -36,20 +37,25 @@ import (
 // Embedded certificates for testing
 // The self-signed cert expires in 2028
 var selfSignedKeyPEM = `-----BEGIN EC PRIVATE KEY-----
-MHcCAQEEIMLemLh3+uDzww1pvqP6Xj2Z0Kc6yqf3RxyfTBNwRuuyoAoGCCqGSM49
-AwEHoUQDQgAEDB3l94vM7EqKr2L/vhqU5IsEub0rviqCAaWGiVAPp3orb/LJqFLS
-yo/k60rhUiir6iD4S4pb5TEb2ouWylQI3A==
+MIGTAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBHkwdwIBAQQgqlBIAUaTj6uG+ETN
+WVSm5x75hLNSVUf5PnJbixQBHGCgCgYIKoEcz1UBgi2hRANCAAS2CgsRr8CP/Erj
+eBiJx9ppfbAfZbIQI9dHUm0AQsbVWlO6jNDgxTi47Wmf5gtilYeUqIBScI/BaWkQ
+An+1jIwh
 -----END EC PRIVATE KEY-----
 `
 var selfSignedCertPEM = `-----BEGIN CERTIFICATE-----
-MIIBdDCCARqgAwIBAgIRAKCiW5r6W32jGUn+l9BORMAwCgYIKoZIzj0EAwIwEjEQ
-MA4GA1UEChMHQWNtZSBDbzAeFw0xODA4MjExMDI1MzJaFw0yODA4MTgxMDI1MzJa
-MBIxEDAOBgNVBAoTB0FjbWUgQ28wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQM
-HeX3i8zsSoqvYv++GpTkiwS5vSu+KoIBpYaJUA+neitv8smoUtLKj+TrSuFSKKvq
-IPhLilvlMRvai5bKVAjco1EwTzAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYI
-KwYBBQUHAwEwDAYDVR0TAQH/BAIwADAaBgNVHREEEzARgglsb2NhbGhvc3SHBH8A
-AAEwCgYIKoZIzj0EAwIDSAAwRQIgOaYc3pdGf2j0uXRyvdBJq2PlK9FkgvsUjXOT
-bQ9fWRkCIQCr1FiRRzapgtrnttDn3O2fhLlbrw67kClzY8pIIN42Qw==
+MIICFDCCAbugAwIBAgIQTH+Jw6wgrqvFn8nN2Z4iNjAKBggqgRzPVQGDdTBcMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEPMA0GA1UEChMGc2VydmVyMQ8wDQYDVQQDEwZzZXJ2ZXIwHhcNMjAx
+MDEzMTQ1NDQ0WhcNMzAxMDExMTQ1NDQ0WjBcMQswCQYDVQQGEwJVUzETMBEGA1UE
+CBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzEPMA0GA1UEChMG
+c2VydmVyMQ8wDQYDVQQDEwZzZXJ2ZXIwWTATBgcqhkjOPQIBBggqgRzPVQGCLQNC
+AAS2CgsRr8CP/ErjeBiJx9ppfbAfZbIQI9dHUm0AQsbVWlO6jNDgxTi47Wmf5gti
+lYeUqIBScI/BaWkQAn+1jIwho18wXTAOBgNVHQ8BAf8EBAMCAaYwDwYDVR0lBAgw
+BgYEVR0lADAPBgNVHRMBAf8EBTADAQH/MA0GA1UdDgQGBAQBAgMEMBoGA1UdEQQT
+MBGCCWxvY2FsaG9zdIcEfwAAATAKBggqgRzPVQGDdQNHADBEAiBqCgFi2yXg0a9y
+DvcAZzzLBLve48PAjZfYTi24YA6ovAIgfDXO5BIASJE/aY/0Mkdg6YabI7RJhEcX
+/4Mt25/Fsmc=
 -----END CERTIFICATE-----
 `
 
@@ -200,18 +206,18 @@ const (
 
 // string for cert filenames
 var (
-	orgCAKey        = filepath.Join("testdata", "certs", "Org%d-key.pem")
-	orgCACert       = filepath.Join("testdata", "certs", "Org%d-cert.pem")
-	orgServerKey    = filepath.Join("testdata", "certs", "Org%d-server%d-key.pem")
-	orgServerCert   = filepath.Join("testdata", "certs", "Org%d-server%d-cert.pem")
-	orgClientKey    = filepath.Join("testdata", "certs", "Org%d-client%d-key.pem")
-	orgClientCert   = filepath.Join("testdata", "certs", "Org%d-client%d-cert.pem")
-	childCAKey      = filepath.Join("testdata", "certs", "Org%d-child%d-key.pem")
-	childCACert     = filepath.Join("testdata", "certs", "Org%d-child%d-cert.pem")
-	childServerKey  = filepath.Join("testdata", "certs", "Org%d-child%d-server%d-key.pem")
-	childServerCert = filepath.Join("testdata", "certs", "Org%d-child%d-server%d-cert.pem")
-	childClientKey  = filepath.Join("testdata", "certs", "Org%d-child%d-client%d-key.pem")
-	childClientCert = filepath.Join("testdata", "certs", "Org%d-child%d-client%d-cert.pem")
+	orgCAKey        = filepath.Join("testgmdata", "certs", "Org%d-key.pem")
+	orgCACert       = filepath.Join("testgmdata", "certs", "Org%d-cert.pem")
+	orgServerKey    = filepath.Join("testgmdata", "certs", "Org%d-server%d-key.pem")
+	orgServerCert   = filepath.Join("testgmdata", "certs", "Org%d-server%d-cert.pem")
+	orgClientKey    = filepath.Join("testgmdata", "certs", "Org%d-client%d-key.pem")
+	orgClientCert   = filepath.Join("testgmdata", "certs", "Org%d-client%d-cert.pem")
+	childCAKey      = filepath.Join("testgmdata", "certs", "Org%d-child%d-key.pem")
+	childCACert     = filepath.Join("testgmdata", "certs", "Org%d-child%d-cert.pem")
+	childServerKey  = filepath.Join("testgmdata", "certs", "Org%d-child%d-server%d-key.pem")
+	childServerCert = filepath.Join("testgmdata", "certs", "Org%d-child%d-server%d-cert.pem")
+	childClientKey  = filepath.Join("testgmdata", "certs", "Org%d-child%d-client%d-key.pem")
+	childClientCert = filepath.Join("testgmdata", "certs", "Org%d-child%d-client%d-cert.pem")
 )
 
 type testServer struct {
@@ -816,15 +822,15 @@ func TestWithSignedRootCertificates(t *testing.T) {
 	t.Parallel()
 	// use Org1 testdata
 	fileBase := "Org1"
-	certPEMBlock, err := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-server1-cert.pem"))
+	certPEMBlock, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-server1-cert.pem"))
 	if err != nil {
 		t.Fatalf("Failed to load test certificates: %v", err)
 	}
-	keyPEMBlock, err := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-server1-key.pem"))
+	keyPEMBlock, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-server1-key.pem"))
 	if err != nil {
 		t.Fatalf("Failed to load test certificates: %v", err)
 	}
-	caPEMBlock, err := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-cert.pem"))
+	caPEMBlock, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-cert.pem"))
 	if err != nil {
 		t.Fatalf("Failed to load test certificates: %v", err)
 	}
@@ -904,9 +910,9 @@ func TestWithSignedIntermediateCertificates(t *testing.T) {
 	t.Parallel()
 	// use Org1 testdata
 	fileBase := "Org1"
-	certPEMBlock, err := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-child1-server1-cert.pem"))
-	keyPEMBlock, err := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-child1-server1-key.pem"))
-	intermediatePEMBlock, err := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-child1-cert.pem"))
+	certPEMBlock, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-child1-server1-cert.pem"))
+	keyPEMBlock, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-child1-server1-key.pem"))
+	intermediatePEMBlock, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-child1-cert.pem"))
 
 	if err != nil {
 		t.Fatalf("Failed to load test certificates: %v", err)
@@ -1380,7 +1386,7 @@ func TestUpdateTLSCert(t *testing.T) {
 	t.Parallel()
 
 	readFile := func(path string) []byte {
-		fName := filepath.Join("testdata", "dynamic_cert_update", path)
+		fName := filepath.Join("testgmdata", "dynamic_cert_update", path)
 		data, err := ioutil.ReadFile(fName)
 		if err != nil {
 			panic(fmt.Errorf("Failed reading %s: %v", fName, err))
@@ -1433,8 +1439,8 @@ func TestUpdateTLSCert(t *testing.T) {
 	assert.Contains(t, err.Error(), "context deadline exceeded")
 
 	// new TLS certificate has a SAN of "127.0.0.1" so it should succeed
-	certPath := filepath.Join("testdata", "dynamic_cert_update", "localhost", "server.crt")
-	keyPath := filepath.Join("testdata", "dynamic_cert_update", "localhost", "server.key")
+	certPath := filepath.Join("testgmdata", "dynamic_cert_update", "localhost", "server.crt")
+	keyPath := filepath.Join("testgmdata", "dynamic_cert_update", "localhost", "server.key")
 	tlsCert, err := tls.LoadX509KeyPair(certPath, keyPath)
 	assert.NoError(t, err)
 	srv.SetServerCertificate(tlsCert)
@@ -1442,8 +1448,8 @@ func TestUpdateTLSCert(t *testing.T) {
 	assert.NoError(t, err)
 
 	// revert back to the old certificate, should fail.
-	certPath = filepath.Join("testdata", "dynamic_cert_update", "notlocalhost", "server.crt")
-	keyPath = filepath.Join("testdata", "dynamic_cert_update", "notlocalhost", "server.key")
+	certPath = filepath.Join("testgmdata", "dynamic_cert_update", "notlocalhost", "server.crt")
+	keyPath = filepath.Join("testgmdata", "dynamic_cert_update", "notlocalhost", "server.key")
 	tlsCert, err = tls.LoadX509KeyPair(certPath, keyPath)
 	assert.NoError(t, err)
 	srv.SetServerCertificate(tlsCert)
@@ -1484,13 +1490,13 @@ func TestCipherSuites(t *testing.T) {
 		tls.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,
 		tls.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,
 	}
-	certPEM, err := ioutil.ReadFile(filepath.Join("testdata", "certs",
+	certPEM, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs",
 		"Org1-server1-cert.pem"))
 	assert.NoError(t, err)
-	keyPEM, err := ioutil.ReadFile(filepath.Join("testdata", "certs",
+	keyPEM, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs",
 		"Org1-server1-key.pem"))
 	assert.NoError(t, err)
-	caPEM, err := ioutil.ReadFile(filepath.Join("testdata", "certs",
+	caPEM, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs",
 		"Org1-cert.pem"))
 	assert.NoError(t, err)
 	certPool, err := createCertPool([][]byte{caPEM})
