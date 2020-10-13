@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package comm_test
 
 import (
-	"crypto/tls"
-	"crypto/x509"
+	x509 "github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
 	"io/ioutil"
 	"net"
 	"path/filepath"
@@ -23,7 +23,7 @@ import (
 func TestCreds(t *testing.T) {
 	t.Parallel()
 
-	caPEM, err := ioutil.ReadFile(filepath.Join("testdata", "certs", "Org1-cert.pem"))
+	caPEM, err := ioutil.ReadFile(filepath.Join("testgmdata", "certs", "Org1-cert.pem"))
 	if err != nil {
 		t.Fatalf("failed to read root certificate: %v", err)
 	}
@@ -33,8 +33,8 @@ func TestCreds(t *testing.T) {
 		t.Fatalf("failed to create certPool")
 	}
 	cert, err := tls.LoadX509KeyPair(
-		filepath.Join("testdata", "certs", "Org1-server1-cert.pem"),
-		filepath.Join("testdata", "certs", "Org1-server1-key.pem"),
+		filepath.Join("testgmdata", "certs", "Org1-server1-cert.pem"),
+		filepath.Join("testgmdata", "certs", "Org1-server1-key.pem"),
 	)
 	if err != nil {
 		t.Fatalf("failed to load TLS certificate [%s]", err)
