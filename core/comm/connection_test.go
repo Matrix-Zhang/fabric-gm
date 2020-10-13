@@ -8,9 +8,9 @@ package comm
 
 import (
 	"context"
-	"crypto/tls"
-	"crypto/x509"
 	"fmt"
+	x509 "github.com/tjfoc/gmsm/sm2"
+	tls "github.com/tjfoc/gmtls"
 	"io/ioutil"
 	"net"
 	"path/filepath"
@@ -20,8 +20,9 @@ import (
 
 	testpb "github.com/hyperledger/fabric/core/comm/testdata/grpc"
 	"github.com/stretchr/testify/assert"
+	credentials "github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials"
+	cred "google.golang.org/grpc/credentials"
 )
 
 const (
@@ -51,16 +52,16 @@ func TestClientConnections(t *testing.T) {
 
 	//use Org1 test crypto material
 	fileBase := "Org1"
-	certPEMBlock, _ := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-server1-cert.pem"))
-	keyPEMBlock, _ := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-server1-key.pem"))
-	caPEMBlock, _ := ioutil.ReadFile(filepath.Join("testdata", "certs", fileBase+"-cert.pem"))
+	certPEMBlock, _ := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-server1-cert.pem"))
+	keyPEMBlock, _ := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-server1-key.pem"))
+	caPEMBlock, _ := ioutil.ReadFile(filepath.Join("testgmdata", "certs", fileBase+"-cert.pem"))
 	certPool := x509.NewCertPool()
 	certPool.AppendCertsFromPEM(caPEMBlock)
 
 	var tests = []struct {
 		name       string
 		sc         ServerConfig
-		creds      credentials.TransportCredentials
+		creds      cred.TransportCredentials
 		clientPort int
 		fail       bool
 	}{
