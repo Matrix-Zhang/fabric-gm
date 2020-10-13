@@ -264,7 +264,7 @@ func LoadCertificateECDSA(certPath string) (*x509.Certificate, error) {
 //generate a signed X509 certficate using GMSM2
 func genCertificateGMSM2(baseDir, name string, template, parent *sm2.Certificate, pub *sm2.PublicKey,
 	key bccsp.Key) (*sm2.Certificate, error) {
-	fmt.Println("hehehehe", template.PublicKey.(*sm2.PublicKey))
+	fmt.Printf("SM2 CERT'S PUBLIC KEY [%+v]\n", template.PublicKey.(*sm2.PublicKey))
 	//create the x509 public cert
 	certBytes, err := gm.CreateCertificateToMem(template, parent, key)
 
