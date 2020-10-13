@@ -48,11 +48,12 @@ func newCertTemplate() (sm2.Certificate, error) {
 		return sm2.Certificate{}, err
 	}
 	return sm2.Certificate{
-		Subject:      pkix.Name{SerialNumber: sn.String()},
-		NotBefore:    time.Now().Add(time.Hour * (-24)),
-		NotAfter:     time.Now().Add(time.Hour * 24),
-		KeyUsage:     sm2.KeyUsageKeyEncipherment | sm2.KeyUsageDigitalSignature,
-		SerialNumber: sn,
+		Subject:            pkix.Name{SerialNumber: sn.String()},
+		NotBefore:          time.Now().Add(time.Hour * (-24)),
+		NotAfter:           time.Now().Add(time.Hour * 24),
+		KeyUsage:           sm2.KeyUsageKeyEncipherment | sm2.KeyUsageDigitalSignature,
+		SignatureAlgorithm: sm2.SM2WithSM3,
+		SerialNumber:       sn,
 	}, nil
 }
 
