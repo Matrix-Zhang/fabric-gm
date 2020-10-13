@@ -34,9 +34,9 @@ pipeline {
                 build(
                     job: 'fabric-sample-gm',
                     parameters: [
-                        [$class: 'StringParameterValue', name: 'IMAGE_PEER', value: "${env.DOCKER_REGISTRY}/${env.DOCKER_NS}/fabric-peer-gm:amd64-1.4.7-snapshot-${env.EXTRA_VERSION}"],
-                        [$class: 'StringParameterValue', name: 'IMAGE_ORDERER', value: "${env.DOCKER_REGISTRY}/${env.DOCKER_NS}/fabric-orderer-gm:amd64-1.4.7-snapshot-${env.EXTRA_VERSION}"],
-                        [$class: 'StringParameterValue', name: 'IMAGE_TOOLS', value: "${env.DOCKER_REGISTRY}/${env.DOCKER_NS}/fabric-tools-gm:amd64-1.4.7-snapshot-${env.EXTRA_VERSION}"],
+                        [$class: 'StringParameterValue', name: 'IMAGE_PEER', value: "${env.DOCKER_NS}/fabric-peer-gm:amd64-1.4.7-snapshot-${env.EXTRA_VERSION}"],
+                        [$class: 'StringParameterValue', name: 'IMAGE_ORDERER', value: "${env.DOCKER_NS}/fabric-orderer-gm:amd64-1.4.7-snapshot-${env.EXTRA_VERSION}"],
+                        [$class: 'StringParameterValue', name: 'IMAGE_TOOLS', value: "${env.DOCKER_NS}/fabric-tools-gm:amd64-1.4.7-snapshot-${env.EXTRA_VERSION}"],
                     ]
                 )
             }
