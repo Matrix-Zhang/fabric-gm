@@ -31,17 +31,19 @@ pipeline {
         }
         stage('Test Fabcar') {
             steps {
-                try {
-                    build(
-                        job: 'fabric-sample-gm',
-                        parameters: [
-                            [$class: 'StringParameterValue', name: 'IMAGE_PEER', value: sh(script: 'make peer-docker-list 2>/dev/null ', returnStdout: true).trim()],
-                            [$class: 'StringParameterValue', name: 'IMAGE_ORDERER', value: sh(script: 'make orderer-docker-list 2>/dev/null ', returnStdout: true).trim()],
-                            [$class: 'StringParameterValue', name: 'IMAGE_TOOLS', value: sh(script: 'make tools-docker-list 2>/dev/null ', returnStdout: true).trim()],
-                        ]
-                    )
-                } catch (Exception e) {
-                    currentBuild.result = 'UNSTABLE'
+                script {
+                    try {
+                        build(
+                            job: 'fabric-sample-gm',
+                            parameters: [
+                                [$class: 'StringParameterValue', name: 'IMAGE_PEER', value: sh(script: 'make peer-docker-list 2>/dev/null ', returnStdout: true).trim()],
+                                [$class: 'StringParameterValue', name: 'IMAGE_ORDERER', value: sh(script: 'make orderer-docker-list 2>/dev/null ', returnStdout: true).trim()],
+                                [$class: 'StringParameterValue', name: 'IMAGE_TOOLS', value: sh(script: 'make tools-docker-list 2>/dev/null ', returnStdout: true).trim()],
+                            ]
+                        )
+                    } catch (Exception e) {
+                        currentBuild.result = 'UNSTABLE'
+                    }
                 }
             }
         }
