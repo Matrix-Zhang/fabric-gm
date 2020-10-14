@@ -21,7 +21,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 setBuildStatus("Build Started", "PENDING");
-                dir('src/github.com/hyperledger') {
+                dir('src/github.com/hyperledger/fabric') {
                   sh '''
                   make docker
                   '''
@@ -31,7 +31,7 @@ pipeline {
 
         stage('Upload Image') {
             steps {
-                dir('src/github.com/hyperledger') {
+                dir('src/github.com/hyperledger/fabric') {
                     sh 'aws ecr get-login-password | docker login --username AWS --password-stdin ${DOCKER_REGISTRY}'
                     sh '''
                     make docker-list 2>/dev/null | grep ^twbc | while read line
