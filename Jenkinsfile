@@ -1,16 +1,7 @@
-def getRepoURL() {
-  sh "git config --get remote.origin.url > .git/remote-url"
-  return readFile(".git/remote-url").trim()
-}
-
 void setBuildStatus(String message, String state) {
-  dir('src/github.com/hyperledger') {
-    repoUrl = getRepoURL()
-  }
-
   step([
       $class: "GitHubCommitStatusSetter",
-      reposSource: [$class: "ManuallyEnteredRepositorySource", url: repoUrl],
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/tw-bc-group/fabric-gm"],
       contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
