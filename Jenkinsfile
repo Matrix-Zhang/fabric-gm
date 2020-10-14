@@ -14,7 +14,7 @@ pipeline {
     environment {
         DOCKER_NS     = "${DOCKER_REGISTRY}/twbc"
         EXTRA_VERSION = "build-${BUILD_NUMBER}"
-        GOPATH        = "${$WORKSPACE}"
+        GOPATH        = "${WORKSPACE}"
     }
 
     stages {
