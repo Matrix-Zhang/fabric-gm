@@ -4,7 +4,9 @@ def getRepoURL() {
 }
 
 void setBuildStatus(String message, String state) {
-  repoUrl = getRepoURL()
+  dir('src/github.com/hyperledger') {
+    repoUrl = getRepoURL()
+  }
 
   step([
       $class: "GitHubCommitStatusSetter",
