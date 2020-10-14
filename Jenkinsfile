@@ -16,11 +16,7 @@ void setBuildStatus(String message, String state) {
 }
 
 pipeline {
-    agent {
-      dockerfile {
-        args '-v "/var/run/docker.sock:/var/run/docker.sock"'
-      }
-    }
+    agent any
 
     environment {
         DOCKER_NS     = "${DOCKER_REGISTRY}/twbc"
@@ -32,10 +28,14 @@ pipeline {
             steps {
                 setBuildStatus("Build Started", "PENDING");
                 sh '''
+                export GOPATH="$PWD/gopath"
+                mkdir -p $PWD/gopath/src/github.com/hyperledger
+                ln -s $PWD $PWD/gopath/src/github.com/hyperledger/fabric
                 make docker
                 '''
             }
         }
+
         stage('Upload Image') {
             steps {
                 sh 'aws ecr get-login-password | docker login --username AWS --password-stdin ${DOCKER_REGISTRY}'
