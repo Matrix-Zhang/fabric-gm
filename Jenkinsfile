@@ -16,7 +16,11 @@ void setBuildStatus(String message, String state) {
 }
 
 pipeline {
-    agent any
+    agent {
+      dockerfile {
+        args '-v "/var/run/docker.sock:/var/run/docker.sock"'
+      }
+    }
 
     environment {
         DOCKER_NS     = "${DOCKER_REGISTRY}/twbc"
