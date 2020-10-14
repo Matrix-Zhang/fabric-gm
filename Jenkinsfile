@@ -21,33 +21,35 @@ pipeline {
     environment {
         DOCKER_NS     = "${DOCKER_REGISTRY}/twbc"
         EXTRA_VERSION = "build-${BUILD_NUMBER}"
+        GOPATH        = "${$WORKSPACE}"
     }
 
     stages {
         stage('Build Image') {
             steps {
                 setBuildStatus("Build Started", "PENDING");
-                sh '''
-                export GOPATH="$PWD/gopath"
-                mkdir -p $PWD/gopath/src/github.com/hyperledger
-                ln -s $PWD $PWD/gopath/src/github.com/hyperledger/fabric
-                make docker
-                '''
+                dir('src/github.com/hyperledger') {
+                  sh '''
+                  make docker
+                  '''
+                }
             }
         }
 
         stage('Upload Image') {
             steps {
-                sh 'aws ecr get-login-password | docker login --username AWS --password-stdin ${DOCKER_REGISTRY}'
-                sh '''
-                make docker-list 2>/dev/null | grep ^twbc | while read line
-                do
-                   docker tag $line ${line/:*/:latest}
-                   docker push $line
-                   docker push ${line/:*/:latest}
-                   docker rmi $line
-                done
-                '''
+                dir('src/github.com/hyperledger') {
+                    sh 'aws ecr get-login-password | docker login --username AWS --password-stdin ${DOCKER_REGISTRY}'
+                    sh '''
+                    make docker-list 2>/dev/null | grep ^twbc | while read line
+                    do
+                       docker tag $line ${line/:*/:latest}
+                       docker push $line
+                       docker push ${line/:*/:latest}
+                       docker rmi $line
+                    done
+                    '''
+                }
             }
         }
         stage('Test Fabcar') {
