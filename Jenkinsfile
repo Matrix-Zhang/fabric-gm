@@ -23,6 +23,7 @@ pipeline {
                 setBuildStatus("Build Started", "PENDING");
                 dir('src/github.com/hyperledger/fabric') {
                   sh '''
+                  go mod vendor
                   make docker
                   '''
                 }
