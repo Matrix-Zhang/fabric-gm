@@ -47,21 +47,23 @@ pipeline {
         }
         stage('Test Fabcar') {
             steps {
-                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    script {
-                        def result = build(
-                            job: 'fabric-sample-gm',
-                            propagate: false,
-                            parameters: [
-                                [$class: 'StringParameterValue', name: 'IMAGE_PEER', value: sh(script: 'make peer-docker-list 2>/dev/null ', returnStdout: true).trim()],
-                                [$class: 'StringParameterValue', name: 'IMAGE_ORDERER', value: sh(script: 'make orderer-docker-list 2>/dev/null ', returnStdout: true).trim()],
-                                [$class: 'StringParameterValue', name: 'IMAGE_TOOLS', value: sh(script: 'make tools-docker-list 2>/dev/null ', returnStdout: true).trim()],
-                            ]
-                        )
-                        if (result.result.equals("SUCCESS")) {
-                            echo "Passed Test Fabcar"
-                        } else {
-                            error "Failed Test Fabcar"
+                dir('src/github.com/hyperledger/fabric') {
+                    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                        script {
+                            def result = build(
+                                job: 'fabric-sample-gm',
+                                propagate: false,
+                                parameters: [
+                                    [$class: 'StringParameterValue', name: 'IMAGE_PEER', value: sh(script: 'make peer-docker-list 2>/dev/null ', returnStdout: true).trim()],
+                                    [$class: 'StringParameterValue', name: 'IMAGE_ORDERER', value: sh(script: 'make orderer-docker-list 2>/dev/null ', returnStdout: true).trim()],
+                                    [$class: 'StringParameterValue', name: 'IMAGE_TOOLS', value: sh(script: 'make tools-docker-list 2>/dev/null ', returnStdout: true).trim()],
+                                ]
+                            )
+                            if (result.result.equals("SUCCESS")) {
+                                echo "Passed Test Fabcar"
+                            } else {
+                                error "Failed Test Fabcar"
+                            }
                         }
                     }
                 }
