@@ -1,7 +1,14 @@
+def getRepoURL() {
+  sh "git config --get remote.origin.url > .git/remote-url"
+  return readFile(".git/remote-url").trim()
+}
+
 void setBuildStatus(String message, String state) {
+  repoUrl = getRepoURL()
+
   step([
       $class: "GitHubCommitStatusSetter",
-      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/tw-bc-group/fabric-gm"],
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: repoUrl],
       contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
@@ -21,11 +28,14 @@ pipeline {
         stage('Build Image') {
             steps {
                 setBuildStatus("Build Started", "PENDING");
+
                 dir('src/github.com/hyperledger/fabric') {
-                  sh '''
-                  go mod vendor
-                  make docker
-                  '''
+                    checkout scm
+
+                    sh '''
+                    go mod vendor
+                    make docker
+                    '''
                 }
             }
         }
@@ -35,7 +45,7 @@ pipeline {
                 dir('src/github.com/hyperledger/fabric') {
                     sh 'aws ecr get-login-password | docker login --username AWS --password-stdin ${DOCKER_REGISTRY}'
                     sh '''
-                    make docker-list 2>/dev/null | grep ^twbc | while read line
+                    make docker-list 2>/dev/null | grep "$DOCKER_NS" | while read line
                     do
                        docker tag $line ${line/:*/:latest}
                        docker push $line
