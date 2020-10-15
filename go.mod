@@ -61,7 +61,7 @@ require (
 	github.com/tjfoc/gmtls v1.2.1
 	github.com/vektra/mockery v1.1.2 // indirect
 	github.com/willf/bitset v1.1.9
-	github.com/zcqzcg/sarama v1.0.1
+	github.com/zcqzcg/sarama v1.0.1 // indirect
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20181228115726-23731bf9ba55
 	go.uber.org/zap v1.12.0
 	golang.org/x/crypto v0.0.0-20200406173513-056763e48d71

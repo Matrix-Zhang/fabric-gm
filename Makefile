@@ -293,17 +293,17 @@ $(BUILD_DIR)/image/%/Dockerfile: images/%/Dockerfile.in
 $(BUILD_DIR)/image/tools/$(DUMMY): $(BUILD_DIR)/image/tools/Dockerfile
 	$(eval TARGET = ${patsubst $(BUILD_DIR)/image/%/$(DUMMY),%,${@}})
 	@echo "Building docker $(TARGET)-image"
-	$(DBUILD) -t $(DOCKER_NS)/fabric-$(TARGET) -f $(@D)/Dockerfile .
-	docker tag $(DOCKER_NS)/fabric-$(TARGET) $(DOCKER_NS)/fabric-$(TARGET):$(DOCKER_TAG)
-	docker tag $(DOCKER_NS)/fabric-$(TARGET) $(DOCKER_NS)/fabric-$(TARGET):$(ARCH)-latest
+	$(DBUILD) -t $(DOCKER_NS)/fabric-$(TARGET)-gm -f $(@D)/Dockerfile .
+	docker tag $(DOCKER_NS)/fabric-$(TARGET)-gm $(DOCKER_NS)/fabric-$(TARGET)-gm:$(DOCKER_TAG)
+	docker tag $(DOCKER_NS)/fabric-$(TARGET)-gm $(DOCKER_NS)/fabric-$(TARGET)-gm:$(ARCH)-latest
 	@touch $@
 
 $(BUILD_DIR)/image/%/$(DUMMY): Makefile $(BUILD_DIR)/image/%/payload $(BUILD_DIR)/image/%/Dockerfile
 	$(eval TARGET = ${patsubst $(BUILD_DIR)/image/%/$(DUMMY),%,${@}})
 	@echo "Building docker $(TARGET)-image"
-	$(DBUILD) -t $(DOCKER_NS)/fabric-$(TARGET) $(@D)
-	docker tag $(DOCKER_NS)/fabric-$(TARGET) $(DOCKER_NS)/fabric-$(TARGET):$(DOCKER_TAG)
-	docker tag $(DOCKER_NS)/fabric-$(TARGET) $(DOCKER_NS)/fabric-$(TARGET):$(ARCH)-latest
+	$(DBUILD) -t $(DOCKER_NS)/fabric-$(TARGET)-gm $(@D)
+	docker tag $(DOCKER_NS)/fabric-$(TARGET)-gm $(DOCKER_NS)/fabric-$(TARGET)-gm:$(DOCKER_TAG)
+	docker tag $(DOCKER_NS)/fabric-$(TARGET)-gm $(DOCKER_NS)/fabric-$(TARGET)-gm:$(ARCH)-latest
 	@touch $@
 
 $(BUILD_DIR)/gotools.tar.bz2: $(BUILD_DIR)/docker/gotools
@@ -403,13 +403,13 @@ protos: buildenv
 
 %-docker-list:
 	$(eval TARGET = ${patsubst %-docker-list,%,${@}})
-	@echo $(DOCKER_NS)/fabric-$(TARGET):$(DOCKER_TAG)
+	@echo $(DOCKER_NS)/fabric-$(TARGET)-gm:$(DOCKER_TAG)
 
 docker-list: $(patsubst %,%-docker-list, $(IMAGES))
 
 %-docker-clean:
 	$(eval TARGET = ${patsubst %-docker-clean,%,${@}})
-	-docker images --quiet --filter=reference='$(DOCKER_NS)/fabric-$(TARGET):$(ARCH)-$(BASE_VERSION)$(if $(EXTRA_VERSION),-snapshot-*,)' | xargs docker rmi -f
+	-docker images --quiet --filter=reference='$(DOCKER_NS)/fabric-$(TARGET)-gm:$(ARCH)-$(BASE_VERSION)$(if $(EXTRA_VERSION),-snapshot-*,)' | xargs docker rmi -f
 	-@rm -rf $(BUILD_DIR)/image/$(TARGET) ||:
 
 docker-clean: $(patsubst %,%-docker-clean, $(IMAGES))
@@ -418,13 +418,13 @@ docker-tag-latest: $(IMAGES:%=%-docker-tag-latest)
 
 %-docker-tag-latest:
 	$(eval TARGET = ${patsubst %-docker-tag-latest,%,${@}})
-	docker tag $(DOCKER_NS)/fabric-$(TARGET):$(DOCKER_TAG) $(DOCKER_NS)/fabric-$(TARGET):latest
+	docker tag $(DOCKER_NS)/fabric-$(TARGET)-gm:$(DOCKER_TAG) $(DOCKER_NS)/fabric-$(TARGET)-gm:latest
 
 docker-tag-stable: $(IMAGES:%=%-docker-tag-stable)
 
 %-docker-tag-stable:
 	$(eval TARGET = ${patsubst %-docker-tag-stable,%,${@}})
-	docker tag $(DOCKER_NS)/fabric-$(TARGET):$(DOCKER_TAG) $(DOCKER_NS)/fabric-$(TARGET):stable
+	docker tag $(DOCKER_NS)/fabric-$(TARGET)-gm:$(DOCKER_TAG) $(DOCKER_NS)/fabric-$(TARGET)-gm:stable
 
 .PHONY: clean
 clean: docker-clean unit-test-clean release-clean
