@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/protos/common"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	configtxtest "github.com/Matrix-Zhang/fabric-gm/common/configtx/test"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

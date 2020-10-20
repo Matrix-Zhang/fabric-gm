@@ -19,12 +19,12 @@ package policy
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/policy/mocks"
-	"github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/core/policy/mocks"
+	"github.com/Matrix-Zhang/fabric-gm/msp/mgmt"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

@@ -11,11 +11,11 @@ import (
 	"fmt"
 
 	"github.com/fsouza/go-dockerclient"
-	"github.com/hyperledger/fabric/core/chaincode/platforms"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/car"
-	"github.com/hyperledger/fabric/core/container"
-	cutil "github.com/hyperledger/fabric/core/container/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/platforms"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/platforms/car"
+	"github.com/Matrix-Zhang/fabric-gm/core/container"
+	cutil "github.com/Matrix-Zhang/fabric-gm/core/container/util"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 // VM implementation of VM management functionality.

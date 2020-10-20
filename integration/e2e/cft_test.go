@@ -26,14 +26,14 @@ import (
 
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/cmd/common/signer"
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/msp"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/cmd/common/signer"
+	"github.com/Matrix-Zhang/fabric-gm/common/configtx"
+	"github.com/Matrix-Zhang/fabric-gm/common/util"
+	"github.com/Matrix-Zhang/fabric-gm/integration/nwo"
+	"github.com/Matrix-Zhang/fabric-gm/integration/nwo/commands"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
@@ -65,7 +65,7 @@ var _ = Describe("EndToEnd Crash Fault Tolerance", func() {
 		chaincode = nwo.Chaincode{
 			Name:    "mycc",
 			Version: "0.0",
-			Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+			Path:    "github.com/Matrix-Zhang/fabric-gm/integration/chaincode/simple/cmd",
 			Ctor:    `{"Args":["init","a","100","b","200"]}`,
 			Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 		}

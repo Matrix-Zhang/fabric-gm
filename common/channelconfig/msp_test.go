@@ -9,9 +9,9 @@ package channelconfig
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/core/config/configtest"
-	"github.com/hyperledger/fabric/msp"
-	mspprotos "github.com/hyperledger/fabric/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/core/config/configtest"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	mspprotos "github.com/Matrix-Zhang/fabric-gm/protos/msp"
 	"github.com/stretchr/testify/assert"
 )
 

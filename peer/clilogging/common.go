@@ -8,11 +8,11 @@ package clilogging
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/crypto"
-	"github.com/hyperledger/fabric/peer/common"
-	common2 "github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto"
+	"github.com/Matrix-Zhang/fabric-gm/peer/common"
+	common2 "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

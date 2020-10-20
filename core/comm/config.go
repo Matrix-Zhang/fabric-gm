@@ -9,8 +9,8 @@ package comm
 import (
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/metrics"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/metrics"
 	"github.com/tjfoc/gmsm/sm2"
 	tls "github.com/tjfoc/gmtls"
 	"google.golang.org/grpc"

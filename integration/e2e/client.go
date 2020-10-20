@@ -12,12 +12,12 @@ import (
 	"path"
 	"time"
 
-	"github.com/hyperledger/fabric/cmd/common/signer"
-	"github.com/hyperledger/fabric/core/comm"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/orderer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/cmd/common/signer"
+	"github.com/Matrix-Zhang/fabric-gm/core/comm"
+	"github.com/Matrix-Zhang/fabric-gm/integration/nwo"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/orderer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	. "github.com/onsi/gomega"
 	"github.com/pkg/errors"
 )

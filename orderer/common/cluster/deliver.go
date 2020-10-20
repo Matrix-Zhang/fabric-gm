@@ -15,12 +15,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/hyperledger/fabric/common/crypto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/orderer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/util"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/orderer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )

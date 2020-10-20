@@ -10,17 +10,17 @@ import (
 	"fmt"
 	"regexp"
 
-	commonerrors "github.com/hyperledger/fabric/common/errors"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/ccmetadata"
-	. "github.com/hyperledger/fabric/core/common/validation/statebased"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/capabilities"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/identities"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/policies"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/state"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	commonerrors "github.com/Matrix-Zhang/fabric-gm/common/errors"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/platforms/ccmetadata"
+	. "github.com/Matrix-Zhang/fabric-gm/core/common/validation/statebased"
+	. "github.com/Matrix-Zhang/fabric-gm/core/handlers/validation/api/capabilities"
+	. "github.com/Matrix-Zhang/fabric-gm/core/handlers/validation/api/identities"
+	. "github.com/Matrix-Zhang/fabric-gm/core/handlers/validation/api/policies"
+	. "github.com/Matrix-Zhang/fabric-gm/core/handlers/validation/api/state"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 )
 
 var logger = flogging.MustGetLogger("vscc")

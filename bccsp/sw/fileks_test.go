@@ -26,7 +26,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/utils"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/utils"
 	"github.com/stretchr/testify/assert"
 )
 

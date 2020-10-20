@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/viperutil"
-	cf "github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/orderer/etcdraft"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/common/viperutil"
+	cf "github.com/Matrix-Zhang/fabric-gm/core/config"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/orderer/etcdraft"
 	"github.com/spf13/viper"
 )
 

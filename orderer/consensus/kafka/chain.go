@@ -14,12 +14,12 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
-	"github.com/hyperledger/fabric/orderer/consensus"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/localconfig"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/msgprocessor"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	ab "github.com/Matrix-Zhang/fabric-gm/protos/orderer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/pkg/errors"
 	"github.com/qianyan/sarama"
 )

@@ -9,11 +9,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/chaincode/shim/ext/entities"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/factory"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim/ext/entities"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 const DECKEY = "DECKEY"

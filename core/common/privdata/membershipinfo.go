@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package privdata
 
 import (
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
 )
 
 var logger = flogging.MustGetLogger("common.privdata")

@@ -19,7 +19,7 @@ package policies
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
 )
 
 func TestPolicyManagerInterface(t *testing.T) {

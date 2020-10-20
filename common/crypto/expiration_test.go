@@ -17,10 +17,10 @@ import (
 	x509 "github.com/tjfoc/gmsm/sm2"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/crypto"
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	"github.com/hyperledger/fabric/protos/msp"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto/tlsgen"
+	"github.com/Matrix-Zhang/fabric-gm/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

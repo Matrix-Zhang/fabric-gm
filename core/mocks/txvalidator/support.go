@@ -19,12 +19,12 @@ package support
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	mockpolicies "github.com/hyperledger/fabric/common/mocks/policies"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/common/channelconfig"
+	mockpolicies "github.com/Matrix-Zhang/fabric-gm/common/mocks/policies"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
 )
 
 type Support struct {

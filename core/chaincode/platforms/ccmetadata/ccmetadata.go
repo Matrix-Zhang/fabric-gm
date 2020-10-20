@@ -7,7 +7,7 @@
 package ccmetadata
 
 import (
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
 )
 
 //logger used by this package

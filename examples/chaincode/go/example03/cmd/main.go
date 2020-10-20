@@ -9,8 +9,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/examples/chaincode/go/example03"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim"
+	"github.com/Matrix-Zhang/fabric-gm/examples/chaincode/go/example03"
 )
 
 func main() {

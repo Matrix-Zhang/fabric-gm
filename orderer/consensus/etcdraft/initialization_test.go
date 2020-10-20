@@ -9,13 +9,13 @@ package etcdraft_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/metrics/disabled"
-	"github.com/hyperledger/fabric/core/comm"
-	"github.com/hyperledger/fabric/orderer/common/cluster"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/orderer/common/multichannel"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"
+	"github.com/Matrix-Zhang/fabric-gm/common/metrics/disabled"
+	"github.com/Matrix-Zhang/fabric-gm/core/comm"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/cluster"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/localconfig"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/multichannel"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus/etcdraft"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus/etcdraft/mocks"
 	"github.com/stretchr/testify/assert"
 )
 

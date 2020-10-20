@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"sync"
 
-	b "github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/factory"
+	b "github.com/Matrix-Zhang/fabric-gm/bccsp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/factory"
 )
 
 var bccspInst b.BCCSP

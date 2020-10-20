@@ -15,17 +15,17 @@ import (
 	"reflect"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/tools/configtxlator/metadata"
-	"github.com/hyperledger/fabric/common/tools/configtxlator/rest"
-	"github.com/hyperledger/fabric/common/tools/configtxlator/update"
-	"github.com/hyperledger/fabric/common/tools/protolator"
-	_ "github.com/hyperledger/fabric/protos/common"
-	cb "github.com/hyperledger/fabric/protos/common" // Import these to register the proto types
-	_ "github.com/hyperledger/fabric/protos/msp"
-	_ "github.com/hyperledger/fabric/protos/orderer"
-	_ "github.com/hyperledger/fabric/protos/orderer/etcdraft"
-	_ "github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/configtxlator/metadata"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/configtxlator/rest"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/configtxlator/update"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/protolator"
+	_ "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common" // Import these to register the proto types
+	_ "github.com/Matrix-Zhang/fabric-gm/protos/msp"
+	_ "github.com/Matrix-Zhang/fabric-gm/protos/orderer"
+	_ "github.com/Matrix-Zhang/fabric-gm/protos/orderer/etcdraft"
+	_ "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 
 	"github.com/gorilla/handlers"
 	"github.com/pkg/errors"

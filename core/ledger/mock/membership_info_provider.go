@@ -4,8 +4,8 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
 )
 
 type MembershipInfoProvider struct {

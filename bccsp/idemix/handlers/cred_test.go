@@ -8,9 +8,9 @@ package handlers_test
 import (
 	"crypto/rand"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/idemix/handlers"
-	"github.com/hyperledger/fabric/bccsp/idemix/handlers/mock"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/idemix/handlers"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/idemix/handlers/mock"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/pkg/errors"

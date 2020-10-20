@@ -4,8 +4,8 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/queryutil"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/kvledger/txmgmt/queryutil"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/kvledger/txmgmt/statedb"
 )
 
 type QueryExecuter struct {

@@ -10,10 +10,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/hyperledger/fabric/common/crypto"
-	"github.com/hyperledger/fabric/core/handlers/auth"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto"
+	"github.com/Matrix-Zhang/fabric-gm/core/handlers/auth"
+	"github.com/Matrix-Zhang/fabric-gm/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/pkg/errors"
 )
 

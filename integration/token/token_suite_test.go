@@ -10,7 +10,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/hyperledger/fabric/integration/nwo"
+	"github.com/Matrix-Zhang/fabric-gm/integration/nwo"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

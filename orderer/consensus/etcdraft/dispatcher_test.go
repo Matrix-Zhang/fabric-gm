@@ -9,10 +9,10 @@ package etcdraft_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"
-	"github.com/hyperledger/fabric/protos/orderer"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus/etcdraft"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus/etcdraft/mocks"
+	"github.com/Matrix-Zhang/fabric-gm/protos/orderer"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )

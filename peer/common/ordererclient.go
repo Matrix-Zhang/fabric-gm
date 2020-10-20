@@ -9,8 +9,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hyperledger/fabric/core/comm"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	"github.com/Matrix-Zhang/fabric-gm/core/comm"
+	ab "github.com/Matrix-Zhang/fabric-gm/protos/orderer"
 	"github.com/pkg/errors"
 	tls "github.com/tjfoc/gmtls"
 )

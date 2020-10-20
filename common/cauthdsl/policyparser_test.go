@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/msp"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -7,12 +7,12 @@ SPDX-License-Identifier: Apache-2.0
 package privdata
 
 import (
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/transientstore"
-	"github.com/hyperledger/fabric/gossip/privdata/common"
-	"github.com/hyperledger/fabric/gossip/util"
-	gossip2 "github.com/hyperledger/fabric/protos/gossip"
-	"github.com/hyperledger/fabric/protos/ledger/rwset"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/transientstore"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/privdata/common"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/util"
+	gossip2 "github.com/Matrix-Zhang/fabric-gm/protos/gossip"
+	"github.com/Matrix-Zhang/fabric-gm/protos/ledger/rwset"
 	"github.com/pkg/errors"
 )
 

@@ -13,11 +13,11 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/flogging/floggingtest"
-	"github.com/hyperledger/fabric/msp"
-	cb "github.com/hyperledger/fabric/protos/common"
-	mb "github.com/hyperledger/fabric/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging/floggingtest"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	mb "github.com/Matrix-Zhang/fabric-gm/protos/msp"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -10,12 +10,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/blkstorage/fsblkstorage"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	"github.com/hyperledger/fabric/core/ledger/ledgermgmt"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/blkstorage/fsblkstorage"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/kvledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/ledgerconfig"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/ledgermgmt"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
 	"github.com/stretchr/testify/assert"
 )
 

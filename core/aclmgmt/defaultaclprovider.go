@@ -9,13 +9,13 @@ package aclmgmt
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/aclmgmt/resources"
-	"github.com/hyperledger/fabric/core/peer"
-	"github.com/hyperledger/fabric/core/policy"
-	"github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/core/aclmgmt/resources"
+	"github.com/Matrix-Zhang/fabric-gm/core/peer"
+	"github.com/Matrix-Zhang/fabric-gm/core/policy"
+	"github.com/Matrix-Zhang/fabric-gm/msp/mgmt"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 const (

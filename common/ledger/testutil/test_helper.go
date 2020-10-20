@@ -10,13 +10,13 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/common/util"
-	lutils "github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	ptestutils "github.com/hyperledger/fabric/protos/testutils"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/configtx/test"
+	"github.com/Matrix-Zhang/fabric-gm/common/util"
+	lutils "github.com/Matrix-Zhang/fabric-gm/core/ledger/util"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
+	ptestutils "github.com/Matrix-Zhang/fabric-gm/protos/testutils"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

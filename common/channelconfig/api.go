@@ -9,12 +9,12 @@ package channelconfig
 import (
 	"time"
 
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/msp"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/common/configtx"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	ab "github.com/Matrix-Zhang/fabric-gm/protos/orderer"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 // Org stores the common organizational config

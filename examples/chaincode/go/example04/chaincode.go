@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 // This chaincode is a test for chaincode invoking another chaincode - invokes chaincode_example02

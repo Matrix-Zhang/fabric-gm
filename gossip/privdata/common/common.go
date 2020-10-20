@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package common
 
 import (
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/gossip"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/gossip"
 )
 
 // privdata_common holds types that are used both in privdata and mocks packages.

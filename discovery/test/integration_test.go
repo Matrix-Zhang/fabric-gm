@@ -24,36 +24,36 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	bccsp "github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/hyperledger/fabric/common/cauthdsl"
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	policiesmocks "github.com/hyperledger/fabric/common/mocks/policies"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/tools/configtxgen/encoder"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/cclifecycle"
-	lifecyclemocks "github.com/hyperledger/fabric/core/cclifecycle/mocks"
-	"github.com/hyperledger/fabric/core/comm"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/discovery"
-	disc "github.com/hyperledger/fabric/discovery/client"
-	"github.com/hyperledger/fabric/discovery/endorsement"
-	discsupport "github.com/hyperledger/fabric/discovery/support"
-	discacl "github.com/hyperledger/fabric/discovery/support/acl"
-	ccsupport "github.com/hyperledger/fabric/discovery/support/chaincode"
-	"github.com/hyperledger/fabric/discovery/support/config"
-	"github.com/hyperledger/fabric/discovery/support/mocks"
-	"github.com/hyperledger/fabric/gossip/api"
-	gcommon "github.com/hyperledger/fabric/gossip/common"
-	gdisc "github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/common"
-	. "github.com/hyperledger/fabric/protos/discovery"
-	"github.com/hyperledger/fabric/protos/gossip"
-	msprotos "github.com/hyperledger/fabric/protos/msp"
-	"github.com/hyperledger/fabric/protos/utils"
+	bccsp "github.com/Matrix-Zhang/fabric-gm/bccsp/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/cauthdsl"
+	"github.com/Matrix-Zhang/fabric-gm/common/configtx"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto/tlsgen"
+	policiesmocks "github.com/Matrix-Zhang/fabric-gm/common/mocks/policies"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/encoder"
+	genesisconfig "github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/localconfig"
+	"github.com/Matrix-Zhang/fabric-gm/common/util"
+	"github.com/Matrix-Zhang/fabric-gm/core/cclifecycle"
+	lifecyclemocks "github.com/Matrix-Zhang/fabric-gm/core/cclifecycle/mocks"
+	"github.com/Matrix-Zhang/fabric-gm/core/comm"
+	"github.com/Matrix-Zhang/fabric-gm/core/common/ccprovider"
+	"github.com/Matrix-Zhang/fabric-gm/discovery"
+	disc "github.com/Matrix-Zhang/fabric-gm/discovery/client"
+	"github.com/Matrix-Zhang/fabric-gm/discovery/endorsement"
+	discsupport "github.com/Matrix-Zhang/fabric-gm/discovery/support"
+	discacl "github.com/Matrix-Zhang/fabric-gm/discovery/support/acl"
+	ccsupport "github.com/Matrix-Zhang/fabric-gm/discovery/support/chaincode"
+	"github.com/Matrix-Zhang/fabric-gm/discovery/support/config"
+	"github.com/Matrix-Zhang/fabric-gm/discovery/support/mocks"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/api"
+	gcommon "github.com/Matrix-Zhang/fabric-gm/gossip/common"
+	gdisc "github.com/Matrix-Zhang/fabric-gm/gossip/discovery"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
+	. "github.com/Matrix-Zhang/fabric-gm/protos/discovery"
+	"github.com/Matrix-Zhang/fabric-gm/protos/gossip"
+	msprotos "github.com/Matrix-Zhang/fabric-gm/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/onsi/gomega/gexec"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
@@ -586,12 +586,12 @@ func createPolicyManagerGetter(t *testing.T, mspMgr msp.MSPManager) *mocks.Chann
 
 func buildBinaries() error {
 	var err error
-	cryptogen, err = gexec.Build("github.com/hyperledger/fabric/common/tools/cryptogen")
+	cryptogen, err = gexec.Build("github.com/Matrix-Zhang/fabric-gm/common/tools/cryptogen")
 	if err != nil {
 		return errors.WithStack(err)
 	}
 
-	idemixgen, err = gexec.Build("github.com/hyperledger/fabric/common/tools/idemixgen")
+	idemixgen, err = gexec.Build("github.com/Matrix-Zhang/fabric-gm/common/tools/idemixgen")
 	if err != nil {
 		return errors.WithStack(err)
 	}

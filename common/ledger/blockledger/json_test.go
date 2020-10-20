@@ -20,10 +20,10 @@ import (
 	"io/ioutil"
 	"os"
 
-	. "github.com/hyperledger/fabric/common/ledger/blockledger"
-	jsonledger "github.com/hyperledger/fabric/common/ledger/blockledger/json"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	cb "github.com/hyperledger/fabric/protos/common"
+	. "github.com/Matrix-Zhang/fabric-gm/common/ledger/blockledger"
+	jsonledger "github.com/Matrix-Zhang/fabric-gm/common/ledger/blockledger/json"
+	genesisconfig "github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/localconfig"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
 )
 
 var genesisBlock = cb.NewBlock(0, nil)

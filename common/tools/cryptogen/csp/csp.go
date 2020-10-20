@@ -15,9 +15,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/bccsp/signer"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/factory"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/signer"
 	"github.com/pkg/errors"
 	"github.com/tjfoc/gmsm/sm2"
 )

@@ -12,10 +12,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/config/configtest"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/factory"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/core/config/configtest"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
 	"github.com/spf13/viper"
 )
 

@@ -10,10 +10,10 @@ import (
 	"context"
 	"sync"
 
-	commonledger "github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/ledger"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	commonledger "github.com/Matrix-Zhang/fabric-gm/common/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/common/ccprovider"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 	"github.com/pkg/errors"
 )
 

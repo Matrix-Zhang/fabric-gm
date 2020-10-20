@@ -20,7 +20,7 @@ import (
 	"encoding/base64"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim/ext/attrmgr"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim/ext/attrmgr"
 	"github.com/stretchr/testify/assert"
 )
 

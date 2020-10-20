@@ -9,9 +9,9 @@ package service
 import (
 	"reflect"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	deliverclient "github.com/hyperledger/fabric/core/deliverservice"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/Matrix-Zhang/fabric-gm/common/channelconfig"
+	deliverclient "github.com/Matrix-Zhang/fabric-gm/core/deliverservice"
+	"github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 // Config enumerates the configuration methods required by gossip

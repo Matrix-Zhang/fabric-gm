@@ -22,7 +22,7 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp"
 	"github.com/pkg/errors"
 	"github.com/tjfoc/gmsm/sm2"
 )

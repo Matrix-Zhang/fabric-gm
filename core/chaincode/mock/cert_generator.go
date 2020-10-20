@@ -4,7 +4,7 @@ package mock
 import (
 	sync "sync"
 
-	accesscontrol "github.com/hyperledger/fabric/core/chaincode/accesscontrol"
+	accesscontrol "github.com/Matrix-Zhang/fabric-gm/core/chaincode/accesscontrol"
 )
 
 type CertGenerator struct {

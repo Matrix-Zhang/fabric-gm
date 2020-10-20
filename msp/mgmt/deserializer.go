@@ -18,8 +18,8 @@ package mgmt
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/msp"
-	mspproto "github.com/hyperledger/fabric/protos/msp"
+	"github.com/Matrix-Zhang/fabric-gm/msp"
+	mspproto "github.com/Matrix-Zhang/fabric-gm/protos/msp"
 	"github.com/pkg/errors"
 )
 

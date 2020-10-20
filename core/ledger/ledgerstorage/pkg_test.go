@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/ledgerconfig"
 )
 
 type testEnv struct {

@@ -21,10 +21,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/gm"
-	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/hyperledger/fabric/common/tools/cryptogen/csp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/gm"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/cryptogen/csp"
 	"github.com/tjfoc/gmsm/sm2"
 )
 

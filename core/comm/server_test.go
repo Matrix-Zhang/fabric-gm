@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	"github.com/hyperledger/fabric/core/comm"
-	testpb "github.com/hyperledger/fabric/core/comm/testdata/grpc"
+	"github.com/Matrix-Zhang/fabric-gm/common/crypto/tlsgen"
+	"github.com/Matrix-Zhang/fabric-gm/core/comm"
+	testpb "github.com/Matrix-Zhang/fabric-gm/core/comm/testdata/grpc"
 	"github.com/stretchr/testify/assert"
 	credentials "github.com/tjfoc/gmtls/gmcredentials"
 	"google.golang.org/grpc"

@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/kvledger/txmgmt/version"
 	"github.com/stretchr/testify/assert"
 )
 

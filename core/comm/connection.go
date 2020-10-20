@@ -16,8 +16,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/config"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/core/config"
 	"github.com/tjfoc/gmsm/sm2"
 	tls "github.com/tjfoc/gmtls"
 	"github.com/tjfoc/gmtls/gmcredentials"

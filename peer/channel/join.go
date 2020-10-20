@@ -22,11 +22,11 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/hyperledger/fabric/core/scc/cscc"
-	"github.com/hyperledger/fabric/peer/common"
-	pcommon "github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	putils "github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/core/scc/cscc"
+	"github.com/Matrix-Zhang/fabric-gm/peer/common"
+	pcommon "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	pb "github.com/Matrix-Zhang/fabric-gm/protos/peer"
+	putils "github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/spf13/cobra"
 )
 

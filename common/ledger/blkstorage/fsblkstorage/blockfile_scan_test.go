@@ -20,9 +20,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/common/ledger/util"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/testutil"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/util"
+	"github.com/Matrix-Zhang/fabric-gm/protos/common"
 	"github.com/stretchr/testify/assert"
 )
 

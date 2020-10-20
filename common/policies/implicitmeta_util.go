@@ -17,8 +17,8 @@ limitations under the License.
 package policies
 
 import (
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 )
 
 // ImplicitMetaPolicyWithSubPolicy creates an implicitmeta policy

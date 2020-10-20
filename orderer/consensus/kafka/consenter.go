@@ -8,11 +8,11 @@ package kafka
 
 import (
 	"github.com/hyperledger/fabric-lib-go/healthz"
-	"github.com/hyperledger/fabric/common/metrics"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/orderer/consensus"
-	"github.com/hyperledger/fabric/orderer/consensus/inactive"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/common/metrics"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/localconfig"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus/inactive"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
 	"github.com/op/go-logging"
 	"github.com/pkg/errors"
 	"github.com/qianyan/sarama"

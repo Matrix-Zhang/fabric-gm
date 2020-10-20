@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/common"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/util"
 	"github.com/stretchr/testify/assert"
 )
 

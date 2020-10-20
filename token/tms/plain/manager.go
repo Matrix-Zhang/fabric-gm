@@ -9,8 +9,8 @@ package plain
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/token/identity"
-	"github.com/hyperledger/fabric/token/transaction"
+	"github.com/Matrix-Zhang/fabric-gm/token/identity"
+	"github.com/Matrix-Zhang/fabric-gm/token/transaction"
 	"github.com/pkg/errors"
 )
 

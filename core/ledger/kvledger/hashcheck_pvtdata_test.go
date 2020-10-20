@@ -12,10 +12,10 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/protos/ledger/rwset"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/testutil"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/Matrix-Zhang/fabric-gm/protos/ledger/rwset"
 	"github.com/stretchr/testify/assert"
 )
 

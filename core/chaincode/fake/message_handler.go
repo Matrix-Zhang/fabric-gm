@@ -4,8 +4,8 @@ package fake
 import (
 	sync "sync"
 
-	chaincode "github.com/hyperledger/fabric/core/chaincode"
-	peer "github.com/hyperledger/fabric/protos/peer"
+	chaincode "github.com/Matrix-Zhang/fabric-gm/core/chaincode"
+	peer "github.com/Matrix-Zhang/fabric-gm/protos/peer"
 )
 
 type MessageHandler struct {

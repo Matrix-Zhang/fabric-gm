@@ -15,7 +15,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hyperledger/fabric/orderer/mocks/util"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/mocks/util"
 	"github.com/spf13/viper"
 	"github.com/qianyan/sarama"
 )

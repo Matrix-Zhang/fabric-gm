@@ -21,10 +21,10 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/blkstorage"
-	"github.com/hyperledger/fabric/common/ledger/blockledger"
-	"github.com/hyperledger/fabric/common/metrics/disabled"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/blkstorage"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/blockledger"
+	"github.com/Matrix-Zhang/fabric-gm/common/metrics/disabled"
+	genesisconfig "github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/localconfig"
 	"github.com/stretchr/testify/assert"
 )
 

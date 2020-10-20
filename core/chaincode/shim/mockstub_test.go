@@ -12,7 +12,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 )

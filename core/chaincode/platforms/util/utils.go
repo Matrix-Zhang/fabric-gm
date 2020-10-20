@@ -26,9 +26,9 @@ import (
 	"path/filepath"
 
 	docker "github.com/fsouza/go-dockerclient"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	cutil "github.com/hyperledger/fabric/core/container/util"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	"github.com/Matrix-Zhang/fabric-gm/common/util"
+	cutil "github.com/Matrix-Zhang/fabric-gm/core/container/util"
 	"github.com/spf13/viper"
 )
 

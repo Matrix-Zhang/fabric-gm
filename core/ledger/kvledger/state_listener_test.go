@@ -9,11 +9,11 @@ package kvledger
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/common/metrics/disabled"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/mock"
-	"github.com/hyperledger/fabric/protos/ledger/rwset/kvrwset"
+	"github.com/Matrix-Zhang/fabric-gm/common/ledger/testutil"
+	"github.com/Matrix-Zhang/fabric-gm/common/metrics/disabled"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger/mock"
+	"github.com/Matrix-Zhang/fabric-gm/protos/ledger/rwset/kvrwset"
 	"github.com/stretchr/testify/assert"
 )
 

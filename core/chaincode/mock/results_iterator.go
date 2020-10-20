@@ -4,7 +4,7 @@ package mock
 import (
 	sync "sync"
 
-	ledger "github.com/hyperledger/fabric/common/ledger"
+	ledger "github.com/Matrix-Zhang/fabric-gm/common/ledger"
 )
 
 type QueryResultsIterator struct {

@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	mockconfig "github.com/hyperledger/fabric/common/mocks/config"
-	mockblockcutter "github.com/hyperledger/fabric/orderer/mocks/common/blockcutter"
-	mockmultichannel "github.com/hyperledger/fabric/orderer/mocks/common/multichannel"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/flogging"
+	mockconfig "github.com/Matrix-Zhang/fabric-gm/common/mocks/config"
+	mockblockcutter "github.com/Matrix-Zhang/fabric-gm/orderer/mocks/common/blockcutter"
+	mockmultichannel "github.com/Matrix-Zhang/fabric-gm/orderer/mocks/common/multichannel"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

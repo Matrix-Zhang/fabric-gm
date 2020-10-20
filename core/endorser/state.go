@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package endorser
 
 import (
-	"github.com/hyperledger/fabric/core/handlers/endorsement/api/state"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/transientstore"
-	"github.com/hyperledger/fabric/protos/ledger/rwset"
+	"github.com/Matrix-Zhang/fabric-gm/core/handlers/endorsement/api/state"
+	"github.com/Matrix-Zhang/fabric-gm/core/ledger"
+	"github.com/Matrix-Zhang/fabric-gm/core/transientstore"
+	"github.com/Matrix-Zhang/fabric-gm/protos/ledger/rwset"
 	"github.com/pkg/errors"
 )
 

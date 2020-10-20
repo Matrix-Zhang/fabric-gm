@@ -30,7 +30,7 @@ import (
 
 	x509 "github.com/tjfoc/gmsm/sm2"
 
-	"github.com/hyperledger/fabric/bccsp/utils"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/utils"
 	"github.com/stretchr/testify/assert"
 )
 

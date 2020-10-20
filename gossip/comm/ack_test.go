@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/util"
-	proto "github.com/hyperledger/fabric/protos/gossip"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/common"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/util"
+	proto "github.com/Matrix-Zhang/fabric-gm/protos/gossip"
 	"github.com/stretchr/testify/assert"
 )
 

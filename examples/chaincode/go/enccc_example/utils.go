@@ -9,8 +9,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/chaincode/shim/ext/entities"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim"
+	"github.com/Matrix-Zhang/fabric-gm/core/chaincode/shim/ext/entities"
 	"github.com/pkg/errors"
 )
 

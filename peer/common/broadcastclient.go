@@ -17,8 +17,8 @@ limitations under the License.
 package common
 
 import (
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	ab "github.com/Matrix-Zhang/fabric-gm/protos/orderer"
 	"github.com/pkg/errors"
 )
 

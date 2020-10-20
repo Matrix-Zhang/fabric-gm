@@ -9,17 +9,17 @@ package multichannel
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/capabilities"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/tools/configtxgen/configtxgentest"
-	"github.com/hyperledger/fabric/common/tools/configtxgen/encoder"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	"github.com/hyperledger/fabric/orderer/common/blockcutter"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
-	"github.com/hyperledger/fabric/orderer/consensus"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/Matrix-Zhang/fabric-gm/common/capabilities"
+	"github.com/Matrix-Zhang/fabric-gm/common/channelconfig"
+	"github.com/Matrix-Zhang/fabric-gm/common/configtx"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/configtxgentest"
+	"github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/encoder"
+	genesisconfig "github.com/Matrix-Zhang/fabric-gm/common/tools/configtxgen/localconfig"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/blockcutter"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/common/msgprocessor"
+	"github.com/Matrix-Zhang/fabric-gm/orderer/consensus"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
+	"github.com/Matrix-Zhang/fabric-gm/protos/utils"
 )
 
 type mockConsenter struct {

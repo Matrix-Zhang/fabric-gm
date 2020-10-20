@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package endorsement
 
 import (
-	"github.com/hyperledger/fabric/core/handlers/endorsement/api"
-	"github.com/hyperledger/fabric/protos/ledger/rwset"
+	"github.com/Matrix-Zhang/fabric-gm/core/handlers/endorsement/api"
+	"github.com/Matrix-Zhang/fabric-gm/protos/ledger/rwset"
 )
 
 // State defines interaction with the world state

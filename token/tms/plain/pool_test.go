@@ -9,9 +9,9 @@ package plain_test
 import (
 	"io"
 
-	"github.com/hyperledger/fabric/protos/token"
-	"github.com/hyperledger/fabric/token/tms"
-	"github.com/hyperledger/fabric/token/tms/plain"
+	"github.com/Matrix-Zhang/fabric-gm/protos/token"
+	"github.com/Matrix-Zhang/fabric-gm/token/tms"
+	"github.com/Matrix-Zhang/fabric-gm/token/tms/plain"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

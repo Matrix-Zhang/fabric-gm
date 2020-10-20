@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package endorsement
 
 import (
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/common/privdata"
-	"github.com/hyperledger/fabric/gossip/api"
-	. "github.com/hyperledger/fabric/protos/discovery"
+	"github.com/Matrix-Zhang/fabric-gm/common/policies"
+	"github.com/Matrix-Zhang/fabric-gm/core/common/privdata"
+	"github.com/Matrix-Zhang/fabric-gm/gossip/api"
+	. "github.com/Matrix-Zhang/fabric-gm/protos/discovery"
 	"github.com/pkg/errors"
 )
 

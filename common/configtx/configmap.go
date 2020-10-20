@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric/protos/common"
+	cb "github.com/Matrix-Zhang/fabric-gm/protos/common"
 )
 
 const (

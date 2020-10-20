@@ -26,7 +26,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/hyperledger/fabric/bccsp/gm"
+	"github.com/Matrix-Zhang/fabric-gm/bccsp/gm"
 	"github.com/pkg/errors"
 	"github.com/tjfoc/gmsm/sm2"
 )
